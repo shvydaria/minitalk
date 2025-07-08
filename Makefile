@@ -12,19 +12,19 @@ CFLAGS 	= -Wall -Wextra -Werror
 all:		${NAME}
 
 %.o:	%.c
-		${CC} ${CFLAGS} -Ilibft -Iprintf -c $? -o $@
+		${CC} ${CFLAGS} -Ilibft -Ift_printf -c $? -o $@
 
 ${NAME}:	 server client
 
 server:		server.o
 		@make -C libft
 		@make -C ft_printf
-		${CC} ${CFLAGS} $? -Llibft -lft -Lprintf -lftprintf -o server
+		${CC} ${CFLAGS} $? -Llibft -lft -Lft_printf -lftprintf -o server
 
 client:		client.o
 		@make -C libft
 		@make -C ft_printf
-		${CC} ${CFLAGS} $? -Llibft -lft -Lprintf -lftprintf -o client
+		${CC} ${CFLAGS} $? -Llibft -lft -Lft_printf -lftprintf -o client
 
 libft:
 		make -C libft

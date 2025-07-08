@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <signal.h>
-# include "libft/libft.h"
-# include "ft_printf/include/libftprintf.h"
-
+# include "libft.h"
+# include "libftprintf.h"
 #endif
