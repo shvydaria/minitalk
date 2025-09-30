@@ -36,15 +36,24 @@ This allows us to send any character **bit by bit**.
 ## 📊 How it Works
 
 +---------+ SIGUSR1 / SIGUSR2 +---------+
+
 | Client | -----------------------------> | Server |
-| | | |
+
+| |||||||||   |
+
 | send | | rebuild |
+
 | bits | | chars |
+
 +---------+ +---------+
+
 ^ |
-| v
+|  v
+
 | acknowledgment (kill) |
+
 +------------------------------------------+
+
 
 
 [Understanding minitalk by Laura:](https://42-cursus.gitbook.io/guide/2-rank-02/minitalk/understand-minitalk)
