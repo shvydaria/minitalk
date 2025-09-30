@@ -15,9 +15,9 @@
 void	ack_handler(int signum)
 {
 	if (signum == SIGUSR1)
-		ft_printf("Character received successfully.\n");
+		ft_printf("All good, server got the message!\n");
 	else
-		ft_printf("Error receiving character.\n");
+		ft_printf("Error receiving message.\n");
 }
 
 void	send_char(pid_t pid, unsigned char c)
@@ -62,6 +62,5 @@ int	main(int argc, char **argv)
 	while (*str)
 		send_char(pid, *str++);
 	send_char(pid, '\0');
-	pause();
 	return (0);
 }
